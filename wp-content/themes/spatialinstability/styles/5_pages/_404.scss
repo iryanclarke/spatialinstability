@@ -1,0 +1,36 @@
+// 404 page styling
+.content-area .error-404{
+
+  margin-bottom: 50px;
+  // Hero image block
+  .hero-banner{
+    height: 900px;
+    overflow: hidden;
+    display: block;
+
+    .small-info {
+        top: 45%;
+    }
+
+    h3 {
+      padding-top: 30px;
+    }
+
+    // Tablets
+    @media only screen and (max-width: 768px) {
+      height: 500px;
+      .small-info {
+          top: 25%;
+      }
+    }
+
+    // Mobile
+    @media only screen and (max-width: 480px) {
+      height: 400px;
+      .small-info {
+          top: 20%;
+      }
+    }
+
+  }
+}

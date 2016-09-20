@@ -1,0 +1,37 @@
+.et_divi_builder #et_builder_outer_content {
+	.et_pb_section {
+		&#homepage-slider {
+			padding: 0 !important;
+			.et_pb_row {
+				padding: 0 !important;
+				width: 100%;
+				max-width: none;
+
+				.et_pb_module {
+					margin: 0 auto !important;
+
+					.et_pb_slide {
+						height: 100vh;
+						min-height: 450px;
+					}
+				}
+					.et_pb_text {
+						position: absolute;
+						bottom: 30px;
+						left: 0;
+						right: 0;
+						width: 90%;
+						@include center($wrapper-width-narrow);
+						background-color: rgba(black,0.6);
+						padding: 25px 2.5%;
+						border-radius: 10px;
+						z-index: 9;
+						
+						p {
+							max-width: 100%;
+						}
+					}
+			}
+		}
+	}
+}

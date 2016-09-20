@@ -1,0 +1,209 @@
+.et_divi_builder #et_builder_outer_content {
+	.et_pb_section {
+		&#bottom-cta {
+			padding: 40px;
+
+			.et_pb_row {
+				width: 100%;
+				max-width: none;
+				background-color: $color-bg;
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+		}
+
+		&.image-layers + #bottom-testimonial {
+			margin-top: 120px;
+		}
+	}
+}
+
+
+.pre-footer {
+	height: inherit;
+	position: relative;
+	text-align: center;
+	background: #f7f7f7;
+	display: flex;
+	flex-wrap: wrap;
+
+	h2 {
+		font-weight: 400;
+	}
+
+	.footer-cta {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-width: 500px;
+		min-height: 400px;
+		&:last-child {
+			border-left: 1px solid #FFF;
+		}
+	}
+	.footer-text {
+		position: relative;
+		width: 100%;
+		max-width: 500px;
+	}
+}
+
+
+footer {
+	background-size: cover;
+	background-position: center;
+	background-color: $color-main;
+	background-blend-mode: multiply;
+	position: relative;
+
+
+	&.image {
+		background-image: url('images/placeholders/robot-footer.png');
+		-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+   -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+	}
+
+
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+    background: rgba(0,0,0,.8);
+    content: "";
+  }
+
+	ul.menu li{
+		margin-bottom: 0.4em;
+	}
+
+	ul.menu li a, .footer-credits .copyright a {
+		color: $light-grey;
+
+		#{$hover} {
+			color: $white;
+		}
+	}
+
+	li ul li {
+		display: none;
+	}
+
+	p, a {
+		@include font-size(14px);
+		font-weight: 400;
+	}
+
+	p {
+		color: $light-grey
+	}
+
+	.wrapper {
+		max-width: 1080px;
+		z-index: 2;
+		position: relative;
+	}
+
+	.footer-main {
+		display: flex;
+	}
+
+	.footer-credits {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		color: #aaa;
+		border-top: 1px solid rgba(white,0.3);
+		padding: 20px 0;
+		margin-top: 45px;
+
+		p {
+			margin: 5px 0;
+			color: $grey;
+		}
+
+		.social-icons a {
+			margin-left: 1em;
+		}
+	}
+
+
+
+	#secondary {
+		position: relative;
+		display: flex;
+		color: white;
+		flex-grow: 1;
+
+		.widget {
+			flex: 1;
+			padding-left: 20px;
+
+			h2 {
+				@include h5;
+				@include font-size(14px);
+				color: #565656;
+				margin-bottom: 0.7em;
+			}
+		}
+	}
+
+	.post-date {
+		display: block;
+		font-weight: 300;
+		@include font-size(14px);
+		font-style: italic;
+	}
+}
+
+
+$scanLineWidth: 1px;
+
+.scanLines {
+  /*** WEBKIT ***/
+  background: -webkit-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth*2
+  );
+  -webkit-background-size: 100% $scanLineWidth*2;
+  /** MOZILLA **/
+  background: -moz-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth*2
+  );
+  -moz-background-size: 100% $scanLineWidth*2;
+}
+
+.scanLinesLeft {
+	padding: 6% 0 4% 0;
+  /*** WEBKIT ***/
+  background: -webkit-repeating-linear-gradient(
+    left,
+    transparent 0px,
+    transparent $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth*2
+  );
+  -webkit-background-size: 100% $scanLineWidth*2;
+  /** MOZILLA **/
+  background: -moz-repeating-linear-gradient(
+    left,
+    transparent 0px,
+    transparent $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth,
+    rgba(0,0,0,0.25) $scanLineWidth*2
+  );
+  -moz-background-size: 100% $scanLineWidth*2;
+}

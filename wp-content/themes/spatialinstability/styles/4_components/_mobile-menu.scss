@@ -1,0 +1,82 @@
+.menu-toggle, #toggle-right {
+	display: none;
+}
+
+
+
+
+// Tablets
+@media only screen and (max-width: 1000px) {
+	nav {
+		.menu-toggle {
+			display: block;
+		}
+		.menu-toggle  {
+		  text-decoration: none;
+		  text-align: center;
+		  width: 44px;
+		  height: 44px;
+		  @include font-size(30px);
+			padding: 15px 0;
+		  color: #FFF;
+
+			-webkit-transition: all 0.3s ease-out 0s;
+		  -moz-transition: all 0.3s ease-out 0s;
+		  transition: all 0.3s ease-out 0s;
+
+		  position: absolute;
+		  top: 6px;
+		  right: 35px;
+		  bottom: 0;
+		  left: auto;
+		  z-index: 70;
+			#{$hover} {
+		    color: $color-secondary;
+			}
+			&:before {
+				font-family: 'ETmodules' !important;
+		    speak: none;
+		    font-style: normal;
+		    font-weight: normal;
+		    font-variant: normal;
+		    text-transform: none;
+		    line-height: 1;
+		    -webkit-font-smoothing: antialiased;
+				content: "\61";
+				font-size: 40px;
+				left: 0;
+				position: relative;
+				top: 0;
+				cursor: pointer;
+			}
+		}
+
+		div.menu-nav-menu-container {
+			position: fixed;
+		  top: 0px;
+		  right: -270px;
+		  bottom: 0px;
+		  left: auto;
+		  -webkit-transition: all 0.3s ease-out 0s;
+		  -moz-transition: all 0.3s ease-out 0s;
+		  transition: all 0.3s ease-out 0s;
+		  height: auto;
+		  width: 200px;
+			padding: 70px 5px;
+		  background: #32373c;
+		  z-index: 2000;
+		}
+
+		#toggle-right {
+		  display: none;
+			&:checked ~ div.menu-nav-menu-container {
+		    right: 0px !important;
+				text-align: center;
+			}
+			&:checked + .menu-toggle {
+		    right: 79px;
+				color: $color-secondary;
+			}
+		}
+	}
+}

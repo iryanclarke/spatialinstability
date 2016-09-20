@@ -1,0 +1,48 @@
+//
+// @file    colors.scss
+// @theme   spatialinstability Technology
+//
+// @desc    defines theme colors
+// @usage
+//
+//
+
+// Palette colors
+$white: #FFFFFF;
+$black: #000000;
+$orange: #f76c23;
+$orange-hover: darken( $orange, 20% );
+$grey: #686868;
+$light-grey: #898989;
+
+/*
+  Site Colors
+*/
+$color-main: $white;
+$color-secondary: $black;
+$color-third: $orange;
+
+// 1. Document colors
+$body-color: $color-main;
+
+// 2. Header
+$header-color: $color-secondary;
+$header-link-color: $color-main;
+$header-link-hover: $grey;
+
+// 3. Block element colors
+$color-bg: $color-secondary;
+$color-border: #cacaca;
+
+// 4. Text element colors
+$color-link: $orange;
+$color-link-hover: $orange-hover;
+
+$color-text: $color-secondary;
+$color-p: $grey;
+$color-head: $color-text;
+
+// 5. Footer
+$footer-color: $color-secondary;
+$footer-text: #cbcad0;
+$footer-link: $color-main;

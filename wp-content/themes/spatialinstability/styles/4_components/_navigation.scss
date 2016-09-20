@@ -1,0 +1,90 @@
+nav {
+	li {
+		display: inline-block;
+		list-style: none;
+	}
+}
+
+// Custom hack of the fullwidth menu in divi builder
+.et_divi_builder #et_builder_outer_content{
+	.hero-submenu nav.fullwidth-menu-nav ul.fullwidth-menu {
+		position: absolute;
+		bottom: 80px;
+		right: -80px;
+		width: 350px;
+
+		li {
+			width: 100%;
+			border-bottom: 1px solid #919191;
+			margin-bottom: 0.2em;
+			a {
+				@include font-size(13.5px);
+				font-weight: 100 !important;
+				text-transform: uppercase;
+			}
+		}
+
+		li > a {
+			padding-bottom: 5px;
+		}
+	}
+
+}
+
+.social-menu .icon {
+	a {
+		font-size: 0;
+		display: block;
+		line-height: 1;
+
+		&:before {
+			font-family: fontawesome;
+			@include font-size(14px);
+			display: block;
+			color: inherit;
+		}
+
+		&[href*="facebook"] {
+			&:before {
+				content: "\f09a";
+			}
+		}
+
+		&[href*="twitter"] {
+			&:before {
+				content: "\f099";
+			}
+		}
+
+		&[href*="pinterest"] {
+			&:before {
+				content: "\f231";
+			}
+		}
+
+		&[href*="google"] {
+			&:before {
+				content: "\f0d5";
+			}
+		}
+
+		&[href*="instagram"] {
+			&:before {
+				content: "\f16d";
+			}
+		}
+
+		&[href*="youtube"] {
+			&:before {
+				content: "\f16a";
+			}
+		}
+
+		&[href*="linkedin"] {
+			&:before {
+				content: "\f0e1";
+			}
+		}
+
+	}
+}

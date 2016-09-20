@@ -1,0 +1,184 @@
+body.et_divi_builder #et_builder_outer_content .et_pb_section {
+	.et_pb_post_title {
+		margin-bottom: 0 !important;
+
+		.et_pb_title_container h1 {
+			@include h1;
+		}
+	}
+
+
+	.et_pb_text {
+		ul,ol {
+			text-align: left;
+		}
+		ul li {
+			list-style: disc;
+		}
+	}
+
+
+	.et_pb_testimonial {
+		background-color: rgba(black,0.6);
+		@include center($wrapper-width-narrow);
+		padding: 25px;
+		border-radius: 10px;
+		line-height: 1.3;
+    width: 70%;
+
+		p:not(.et_pb_testimonial_meta) {
+			@include font-size(14px);
+			max-width: 100%;
+			padding: 0;
+		}
+
+		strong {
+			font-weight: 400;
+		}
+
+		.et_pb_testimonial_meta {
+			font-weight: bold;
+		}
+
+		+ .et_pb_button_module_wrapper a {
+			background-color: rgba(black,0.6);
+			border-color: rgba(white,0.6);
+
+			#{$hover} {
+				background-color: rgba(black,0.8);
+			}
+		}
+	}
+
+  // Styling the toggle/accordions
+  .et_pb_toggle {
+    margin-bottom: 0% !important;
+    border: none;
+    padding: 20px 0px !important;
+
+    &:not(:first-child) {
+      border-bottom: 1px solid $color-p;
+    }
+    &:first-child {
+      border-top: 1px solid $color-p;
+      border-bottom: 1px solid $color-p;
+    }
+
+    h5 {
+      @include font-size(14px);
+      text-transform: uppercase;
+      font-weight: 600;
+
+      &:before {
+        font-size: 27px;
+        color: #868686;
+        content: '\0050';
+      }
+    }
+
+
+    // Overriding it turning to black from divi
+    &.et_pb_toggle_open {
+      h5.et_pb_toggle_title {
+        color: #666 !important;
+
+        &:before {
+          font-size: 27px;
+          color: #868686;
+          content: '\004f';
+        }
+      }
+    }
+
+    ul {
+      max-width: none;
+      margin-top: 5px;
+    }
+    ul > li {
+      margin-bottom: 0.1em;
+      margin-left: 0.3em;
+      color: #65646a;
+      @include font-size(16px)
+    }
+
+    p, li {
+      @include font-size(16px);
+    }
+    
+    .et_pb_toggle_content p {
+      color: #65646a !important;
+    }
+
+    &.et_pb_toggle_close {
+      background-color: inherit;
+    }
+  }
+
+  .et_pb_testimonial {
+    border-left: 1px solid #CACACA;
+    border-radius: 0;
+    margin-left: 1%;
+
+    &:before {
+      content: none;
+    }
+  }
+
+
+	.et_pb_team_member {
+		text-align: center;
+		margin-bottom: 25px !important;
+
+		.et_pb_team_member_description {
+			display: block;
+			h4 {
+				font-size: inherit;
+				font-weight: bold;
+				margin-top: 20px;
+			}
+			p {
+				line-height: 1.4;
+			}
+			.et_pb_member_position {
+				min-height: 45px;
+				padding-bottom: 0;
+			}
+		}
+
+		.et_pb_team_member_image {
+			position: relative;
+			cursor: pointer;
+			@include transition;
+
+			&:after {
+				content: 'View Bio';
+				@include centerposition;
+				@include button;
+				color: white;
+				border-color: white;
+				opacity: 0;
+				@include transition;
+			}
+			&:before {
+				content: '';
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include overlay(rgba(black,0.6));
+				opacity: 0;
+				@include transition;
+			}
+
+			#{$hover} {
+				transform: scale(1.05);
+
+				&:before,
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+
+}

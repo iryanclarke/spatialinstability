@@ -1,0 +1,21 @@
+.twitter {
+  background-color: #01abf0;
+}
+
+.facebook {
+  background-color: #39579a;
+}
+
+.google {
+  background-color: #df4a32;
+}
+
+.facebook, .google, .twitter {
+  padding: 10px 20px;
+}
+
+.post-social {
+  position: fixed;
+  left: 0;
+  top: 25%;
+}

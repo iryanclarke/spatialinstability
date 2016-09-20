@@ -1,0 +1,624 @@
+#et_builder_outer_content{
+  .et_pb_section {
+    .et_pb_row .et_pb_module {
+
+      margin-bottom: 4%;
+
+      &:first-child {
+        margin-bottom: 1%;
+      }
+
+      p {
+        max-width:1600px;
+        @include font-size(18px);
+        color: $color-p !important;
+      }
+
+      p2 {
+        @include font-size(14px);
+      }
+
+      ul > li {
+        margin-bottom: 0.1em;
+        margin-left: 0.3em;
+        color: $color-p;
+      }
+
+      // Contact page form
+
+      .et_pb_contact_form {
+        margin: 15px auto;
+        max-width: 600px;
+
+        p.et_pb_contact_field {
+          margin: 15px auto;
+        }
+
+        input[type="text"], textarea {
+          background-color: #000;
+          color: #7e7d84;
+          font-weight: 300;
+          border: 1px solid #7e7d84 !important;
+          @include font-size(18px);
+        }
+
+        .et_pb_contact_submit {
+          border: none;
+          padding: 0;
+          line-height: 1.1em !important;
+          text-transform: uppercase;
+          border-bottom: 1px solid #7e7d84 !important;
+          border-radius: 0;
+          @include font-size(12px);
+          font-weight: 300;
+
+
+          &:after {
+            display: inline-block !important;
+            content: "\0035" !important;
+            position: absolute;
+            opacity: 1 !important;
+            font-size: 16px;
+            margin-left: 0em;
+            margin-top: -0.1em;
+            font-family: 'ETmodules' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: 800;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-transition: all 0.4s ease-out;
+        	 	-moz-transition: all 0.4s ease-out;
+        	 	transition: all 0.4s ease-out;
+          }
+
+          &:hover {
+            &:after {
+              margin-left: 0.5em;
+            }
+          }
+
+        }
+
+        .et_contact_bottom_container {
+          margin: 0 auto;
+          float: none;
+          text-align: center;
+        }
+      }
+    }
+
+    .column-4-list {
+      display: flex;
+
+      .et_pb_column {
+        align-items: stretch;
+      }
+
+      .et_pb_module {
+        height: 100%;
+        p {
+          @include font-size(14px);
+        }
+      }
+    }
+
+    // To add a border to the left
+    .et_pb_module.border-left {
+      border-left: 1px solid $color-p;
+      padding-left: 30px;
+      height: 100%;
+      ul > li {
+        margin-bottom: 1em !important;
+        @include font-size(18px);
+      }
+    }
+
+    // To add a border to the top
+    .et_pb_row.border-top {
+      border-top: 1px solid $color-p;
+    }
+
+    a.et_pb_module.et_pb_button  {
+      padding: 0.6em 2.5em;
+      border-radius: 4px;
+      @include font-size(17px);
+    }
+
+
+
+    // Styling testimonial module
+    .et_pb_testimonial {
+
+
+    }
+
+  }
+
+  .et_pb_section#real-estate {
+    h2, h3 {
+      color: #4d7f70;
+    }
+
+    .et_pb_row .et_pb_module.et_pb_text p {
+      color: #65646a !important;
+    }
+  }
+
+  .et_pb_section#construction-management {
+    h2, h3 {
+      color: #004a87;
+    }
+
+    .et_pb_row .et_pb_module.et_pb_text p {
+      color: #65646a !important;
+    }
+  }
+
+  .et_pb_section:nth-child(even) {
+    background-color: $color-third !important;
+  }
+
+
+
+  // Page hero banner styling
+  .et_pb_section.page_hero {
+    padding: 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0,0,0,.4);
+    }
+
+    .et_pb_row {
+      width: 100%;
+      max-width: 1980px;
+      padding: 0;
+      height: 300px;
+      overflow: hidden;
+      display: block;
+
+      &.small-info {
+        padding: 65px;
+        .et_pb_module {
+          padding: 1% 8% 0;
+        }
+
+        // Tablets
+        @media only screen and (max-width: 768px) {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .et_pb_module {
+          padding: 3% 8% 0 8%;
+          color: #FFF;
+
+          &.page_hero_title {
+            @include h2;
+            margin-bottom: 0;
+            z-index: 2;
+          }
+
+          // Tablets
+          @media only screen and (max-width: 768px) {
+            padding: 3% 8% 0 8%;
+          }
+          // Mobile
+          @media only screen and (max-width: 480px) {
+            padding: 3% 8% 0 8%;
+          }
+      }
+    }
+  }
+
+  // Homepage banner styling
+  .et_pb_section.homepage_hero {
+    padding: 0;
+    height: 100vh;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(10,10,20,0.6);
+      content: "";
+    }
+
+    .et_pb_row {
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      display: block;
+
+      .et_pb_column {
+        display: block;
+        position: relative;
+      }
+
+      &.small-info {
+        padding: 65px;
+        max-width: 800px;
+        @include centerposition();
+
+        p {
+          color: #FFF !important;
+        }
+      }
+
+      &.learn-more {
+        position: absolute;
+        top: 94%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+
+      }
+
+      .et_pb_module {
+          color: #FFF;
+          position: relative;
+
+          // Tablets
+          @media only screen and (max-width: 768px) {
+            padding: 3% 8% 0 8%;
+          }
+          // Mobile
+          @media only screen and (max-width: 480px) {
+            padding: 3% 8% 0 8%;
+          }
+      }
+    }
+  }
+
+  // Background image section styling
+  .et_pb_section.background-bg {
+    padding: 0;
+    height: 650px;
+
+    @media only screen and (max-width: 880px) {
+      height: 750px;
+    }
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(0,0,0,0.85);
+      content: "";
+    }
+
+    &.no-filter:before {
+      background: rgba(0,0,0,0);
+    }
+
+    .et_pb_row {
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      display: block;
+
+      .et_pb_column {
+        display: block;
+        position: relative;
+      }
+
+      &.small-info {
+        padding: 65px;
+        @include centerposition();
+        max-width: 780px;
+
+        p {
+          max-width: 700px;
+        }
+
+        @media only screen and (max-width: 880px) {
+          padding: 15px;
+        }
+      }
+
+
+      .et_pb_module {
+          color: #FFF;
+          position: relative;
+
+          // Tablets
+          @media only screen and (max-width: 768px) {
+            padding: 3% 8% 0 8%;
+          }
+          // Mobile
+          @media only screen and (max-width: 480px) {
+            padding: 3% 8% 0 8%;
+          }
+      }
+    }
+  }
+
+
+  .et_pb_section {
+    .column-4-list {
+      p {
+        padding-bottom: 0em;
+      }
+    }
+  }
+
+
+  .et_pb_section.executive-overlay {
+
+    .et_pb_row {
+      .et_pb_image {
+        cursor: pointer;
+        img {
+          cursor: pointer;
+        }
+      }
+
+    }
+
+
+    .et_pb_row.hidden-module {
+      position: absolute;
+      background: black;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 4% 5% 4% 5%;
+
+      @media only screen and (min-width: 1600px) {
+        padding: 4% calc( (100% - 1600px) / 2);
+      }
+      max-width: none;
+
+
+      .close {
+        position: absolute;
+        color: $color-secondary;
+        top: 50px;
+        right: 50px;
+
+        // Tablets
+        @media only screen and (max-width: 768px) {
+          top: 10%;
+          right: 10%;
+        }
+        // Mobile
+        @media only screen and (max-width: 480px) {
+          top: 2%;
+          right: 2%;
+        }
+      }
+
+      .close-button {
+          $size: 30px;
+          cursor: pointer;
+          height: $size;
+          width: $size;
+          position: relative;
+          box-sizing: border-box;
+          line-height: $size;
+          display: inline-block;
+
+          &:before, &:after {
+              $width: 35px;
+              $height: 3px;
+              cursor: pointer;
+              transform: rotate(-45deg);
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-top: -$height/2;
+              margin-left: -$width/2;
+              display: block;
+              height: $height;
+              width: $width;
+              background-color: $color-secondary;
+              transition: all 0.25s ease-out;
+              // Mobile
+              @media only screen and (max-width: 480px) {
+                height: $height/2;
+                width: $width/2;
+              }
+          }
+
+          &:after {
+              transform: rotate(-135deg);
+          }
+
+          &:hover {
+
+              &:before, &:after {
+                  transform: rotate(0deg);
+                  background-color: $color-main;
+              }
+          }
+        }
+    }
+  }
+
+  .et_pb_row.hidden-module#donald-logie, .et_pb_row.hidden-module#william-jussup {
+    background: #65646A;
+
+    .close-button {
+        &:before, &:after {
+            background-color: $color-p;
+        }
+      }
+  }
+
+
+  // 2 Column Background Block
+  .et_pb_section.column_2_fullwidth {
+    padding: 0;
+    a {
+    	color: #FFF;
+    }
+    .et_pb_row.et_pb_row_fullwidth {
+      margin: 0;
+      padding:0;
+      width: 100% !important;
+      max-width: 100% !important;
+
+      .et_pb_column {
+        margin: 0;
+        width: 50%;
+        padding: 150px 80px;
+        min-height: 700px;
+        max-height: 700px;
+        display: block;
+
+        @media only screen and (max-width: 600px) {
+          padding: 50px;
+          min-height: 500px;
+          max-height: 500px;
+        }
+
+        &.grey-hover:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(95,95,107,.5);
+         	transition: background-color 0.5s ease-out;
+        }
+
+        &.grey-hover:hover {
+          &:before {
+            background-color: rgba(95,95,107,.3);
+          }
+        }
+        &.grey-hover:first-child {
+          &:before {
+            width: 50%;
+          }
+        }
+        &.grey-hover:last-child {
+          &:before {
+            width: 50%;
+            left: 50%;
+          }
+        }
+        @media only screen and (max-width: 980px){
+          &.grey-hover:first-child {
+            &:before {
+              width: 100%;
+              height:50%;
+            }
+          }
+          &.grey-hover:last-child {
+            &:before {
+              width: 100%;
+              left: 0;
+              top:50%;
+              height:50%;
+            }
+          }
+        }
+      }
+
+      .bottom-left-link {
+        position: absolute;
+        bottom: 35px;
+
+        @media only screen and (max-width: 600px) {
+          position: relative;
+          margin: 66% 14% !important;
+        }
+      }
+
+
+      .et_pb_module {
+        margin-bottom: 1%;
+        margin: 4% 0;
+        p {
+          max-width: 500px;
+          color: #FFF;
+          position: relative;
+          @include font-size(18px);
+        }
+
+        p2 {
+          max-width: 600px;
+        }
+        h2, h3 {
+          max-width: none;
+          position: relative;
+        }
+        h3 {
+          margin-bottom: 0px;
+        }
+      }
+
+      .et_pb_button {
+        margin-top: 2%;
+        padding: 1em 3em 1em 2.5em;
+        border-radius: 0px;
+        text-decoration: underline !important;
+      }
+
+      .et_pb_button_module_wrapper {
+        a {
+          &:after {
+            display: inline-block !important;
+            content: "\0035" !important;
+            position: absolute;
+            opacity: 1 !important;
+            font-size: 16px;
+            margin-left: 0em;
+            margin-top: .1em;
+            font-family: 'ETmodules' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: 800;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-transition: all 0.4s ease-out;
+        	 	-moz-transition: all 0.4s ease-out;
+        	 	transition: all 0.4s ease-out;
+          }
+
+          &:hover {
+            &:after {
+              margin-left: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Tablets
+  @media only screen and (max-width: 768px) {
+    // Reduced padding class for the 'Who is it for' page
+    .reduced_padding {
+      .et_pb_column {
+        padding: 60px 40px !important;
+        min-height: none !important;
+        max-height: none !important;
+      }
+    }
+  }
+}

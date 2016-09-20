@@ -1,0 +1,55 @@
+/*
+Theme Name: Spatial Instability
+Version: 1.0
+Description: Theme template for Spatial Instability
+Author: Cryo
+Author URI: http://spatialinstability.com
+*/
+
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900);
+
+
+// Variables
+@import "1_variables/colors";
+@import "1_variables/general";
+@import "1_variables/typography";
+
+// Un-modified vendor files
+// @import "vendor/normalize";
+@import "2_vendor/reset";
+@import "2_vendor/gallerycss";
+
+// Base
+@import "3_base/mixins";
+@import "3_base/general";
+@import "3_base/shared";
+@import "3_base/typography";
+@import "3_base/layouts";
+@import "3_base/modules";
+
+// Components
+@import "4_components/buttons";
+@import "4_components/tables";
+@import "4_components/forms";
+@import "4_components/icons";
+@import "4_components/navigation";
+@import "4_components/header";
+@import "4_components/footer";
+@import "4_components/hero-banner";
+@import "4_components/mobile-menu";
+@import "4_components/maps";
+
+// Specific pages
+@import '5_pages/home';
+@import '5_pages/posts';
+@import '5_pages/404';
+@import '5_pages/blog';
+@import '5_pages/events';
+@import '5_pages/divi-customizing';
+
+// Media styles
+@import '6_media/responsive';
+@import '6_media/print';
+@import '6_media/adminbar';
