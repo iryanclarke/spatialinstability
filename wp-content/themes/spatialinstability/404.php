@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package spatialinstability
+ * @package icor
  */
 
 get_header(); ?>
@@ -14,15 +14,20 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<!-- Hero Banner -->
-				<div class="parallax hero-banner filter-blue">
-					<div class="hero-image">
-						<?php //the_post_thumbnail(); ?>
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholders/470883268.jpg" style="top: 0px;">
-						<div class="small-info">
-							<h1><?php esc_html_e( 'Sorry, that page can&rsquo;t be found.', 'spatialinstability' ); ?></h1>
-							<h3><?php esc_html_e( 'Try using one of the menu links', 'spatialinstability' ); ?></h3>
+				<div class="parallax hero-banner" style="background-image: url(
+				  <?php
+				     echo get_stylesheet_directory_uri();
+				     echo "/images/placeholders/404.jpg";
 
-						</div>
+				  ?>
+				  ">
+				  <div class="hero-image scanLines">
+
+				  </div>
+
+					<div class="small-info">
+						<h1><?php esc_html_e( 'Sorry, that page can&rsquo;t be found.', 'icor' ); ?></h1>
+						<h3><?php esc_html_e( 'Try using one of the menu links', 'icor' ); ?></h3>
 					</div>
 				</div>
 			</section><!-- .error-404 -->

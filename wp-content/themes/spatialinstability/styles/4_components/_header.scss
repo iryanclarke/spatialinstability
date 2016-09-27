@@ -12,27 +12,91 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 10px 35px;
+		padding: 15px 35px;
 		margin: 0 auto;
 		max-width: $content-max-width;
 
 		@media screen and (max-width: 1300px) {
-			padding: 10px 1%;
+			padding: 15px 1%;
 		}
 
 		-webkit-transition: all 0.4s ease-out;
 	 	-moz-transition: all 0.4s ease-out;
 	 	transition: all 0.4s ease-out;
 		li > a {
-			padding: 10px 5px;
+			padding: 7px 5px;
 			@include font-size(13.5px);
 			text-transform: uppercase;
+			font-weight: 500;
 		}
 
 		li:last-child {
 			a { color: $color-third; }
 			&:hover {
 				a { color: $orange-hover; }
+			}
+		}
+
+
+		.search-submit{
+		  display: none;
+		}
+
+		@media only screen and (min-width: 1000px) {
+			label {
+			  position: relative;
+				margin-right: 55px;
+			}
+
+			.screen-reader-text:before {
+				font-family: FontAwesome;
+			  content: '\f002';
+			  display: inline-block;
+			  display: block;
+			  width: 26px;
+			  height: 26px;
+			  top: 0;
+				color: #FFF;
+			  left: 0;
+			  padding: 0 5px;
+			}
+
+			.screen-reader-text {
+				width: 26px;
+				height: 26px;
+				clip: initial;
+			}
+
+			.search-field{
+				height: 35px;
+				padding: 3px 5px 3px 23px;
+				font-weight: 400;
+				position: fixed;
+				top: 131px;
+				margin-left: 60px;
+				background: #000;
+				display: none;
+				z-index: 999 !important;
+			}
+		}
+		@media only screen and (max-width: 999px) {
+			.search-form {
+			  display: none;
+			}
+		}
+
+
+		// Styling WPML language selector
+		#lang_sel {
+			height: inherit;
+
+			a, a:visited {
+				font-size: 13px;
+				color: $color-third;
+				background: transparent;
+				border: 1px solid #797979;
+				line-height: 1;
+				font-weight: 500;
 			}
 		}
 
@@ -50,26 +114,12 @@ header {
 		    text-align: center;
 		}
 
-
-		@media screen and (max-width: 1300px) {
-			li > a {
-				padding: 10px 5px;
-			}
-		}
-
 		img {
 			width: 8em;
 			padding: 5px 5px;
 			margin-top: 3px;
-			@media screen and (max-width: 1100px) {
-				width: 10em;
-				padding: 15px 5px;
-			}
-		}
-	}
 
-	.is-sticky {
-		padding: 10px 35px;
+		}
 	}
 
 	#reminder {
@@ -90,9 +140,6 @@ header {
 		height: 70px;
 		width: 200px;
 		max-width: 20%;
-		@media only screen and (max-width: 768px) {
-			height: 72px;
-		}
 	}
 	img {
 		display: block;
@@ -153,6 +200,18 @@ header {
 
 	// Desktop only
 	@media screen and (min-width: 768px) {
+
+		nav.main-navigation {
+			width: 100%;
+			margin: 0 auto;
+			text-align: center;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		.menu-header-menu-container {
+			flex: 2;
+		}
 
 
 	  &> ul > li > a {
@@ -219,12 +278,12 @@ header {
 	}
 
 
-	.current-menu-item > a{
-		color: $color-secondary;
+	.current-menu-item > a {
+		color: $header-link-hover !important;
 	}
 
 	.menu-item-has-children.current-menu-item:after{
-		color: $color-secondary;
+		color: $header-link-hover;
 	}
 
 	z-index: 999 !important;

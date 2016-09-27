@@ -1,0 +1,74 @@
+#et_builder_outer_content .nf-form-wrap {
+  .nf-field-label label {
+    font-weight: 400;
+    color: $color-p;
+  }
+
+  .nf-field-element input,  .nf-field-element textarea, .nf-field-element select{
+    border: 1px solid #dedede;
+    background: #f7f7f7;
+    height: inherit;
+    padding: 10px;
+    color: $color-p;
+  }
+
+  .nf-field-element select {
+    background: #FFF;
+    
+    &:before {
+        display: inline-block;
+        content: "\0033";
+        color: $grey;
+        position: absolute;
+        margin-left: -1.6em;
+        font-size: 35px;
+        font-family: 'ETmodules' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 2.2;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+  }
+
+  .nf-before-form .nf-form-fields-required {
+    font-size: 14px;
+    color: $color-p;
+  }
+
+  .nf-field {
+    padding-top: 1em;
+  }
+
+
+  .one-half {
+    margin-left: 20px;
+    float: right;
+    width: 47.5%;
+
+    &.first {
+      margin-left: 0px;
+      float: left;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
+
+  .one-half.first .nf-field-element {
+    margin-right: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-right: 0px;
+    }
+  }
+
+
+
+}

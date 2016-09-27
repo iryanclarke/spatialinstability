@@ -2,7 +2,7 @@
 .hero-banner{
   padding: 0;
   width: 100%;
-  height: 600px;
+  height: 450px;
   overflow: hidden;
   display: block;
 
@@ -22,7 +22,23 @@
     box-sizing:border-box;;
   }
 
-  $scanLineWidth: 2px;
+  .small-info {
+      color: #FFFFFF;
+      top: 55%;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+      p {
+        max-width: 700px;
+        margin: 0 auto;
+        @media only screen and (max-width: 480px) {
+          display: none;
+        }
+      }
+  }
+
+  $scanLineWidth: 1px;
 
   .scanLines {
     height: 100%;
@@ -59,5 +75,99 @@
   // Mobile
   @media only screen and (max-width: 480px) {
     height: 275px;
+  }
+}
+
+.hero-sub-banner {
+  background: #333333;
+
+  .sub-text {
+    padding: 20px 35px;
+    max-width: $content-max-width;
+    margin: 0 auto;
+  }
+
+  h1 {
+    color: $orange;
+  }
+}
+
+
+.sub-herobanner {
+  background: #333333;
+  margin-top:100px;
+
+  &.no-margin {
+    margin-top: 0;
+  }
+
+  .et_pb_row {
+    padding: 20px 35px;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .et_pb_column {
+    flex: 1 0 auto;
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  ul {
+    text-align: right;
+    list-style: none;
+    & > li {
+      display: inline-block;
+      margin-right: .8em;
+    }
+  }
+
+  a {
+    @include font-size(12px);
+    font-weight: 400;
+    color: $color-main;
+  }
+
+  h1 {
+    color: $orange;
+  }
+
+  @media only screen and (max-width: 999px) {
+    margin-top: 70px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .et_pb_row {
+      flex-wrap: wrap;
+    }
+
+    .et_pb_column {
+      text-align: center;
+      min-width: 400px;
+
+      &:last-child {
+        margin-top: .5em;
+        justify-content: center;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .et_pb_column {
+      min-width: 250px;
+    }
+
+    ul {
+      text-align: center;
+      & > li {
+        width: 100%;
+      }
+    }
+
   }
 }

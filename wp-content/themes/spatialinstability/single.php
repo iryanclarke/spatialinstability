@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package spatialinstability
+ * @package icor
  */
 
 get_header(); ?>
@@ -14,6 +14,8 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 		?>
+
+		<?php display_divi_library_item( $divi_libraryitem_title = 'product-subbanner' ) ?>
 
 
 		<div class="post-content">

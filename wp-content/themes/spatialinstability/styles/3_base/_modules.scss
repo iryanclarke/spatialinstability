@@ -12,9 +12,6 @@ body.et_divi_builder #et_builder_outer_content .et_pb_section {
 		ul,ol {
 			text-align: left;
 		}
-		ul li {
-			list-style: disc;
-		}
 	}
 
 
@@ -104,7 +101,7 @@ body.et_divi_builder #et_builder_outer_content .et_pb_section {
     p, li {
       @include font-size(16px);
     }
-    
+
     .et_pb_toggle_content p {
       color: #65646a !important;
     }

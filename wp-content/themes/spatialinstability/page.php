@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package spatialinstability
+ * @package icor
  */
 
 get_header(); ?>
@@ -24,6 +24,7 @@ get_header(); ?>
 			?>
 			<?php
 				get_template_part( 'template-parts/content', 'herobanner' );
+				get_template_part( 'template-parts/content', 'subbanner' );
 			?>
 
 			<?php

@@ -1,30 +1,31 @@
 // GENERAL POSTS STYLES
 
 .entry-content {
-  padding: 20px 35px;
-  display: flex;
-  width: 100%;
-  max-width: $content-max-width;
-  margin: 0 auto;
+  //display: flex;
+  //width: 100%;
+  //max-width: $content-max-width;
+  //margin: 0 auto;
 }
 
 .post-content {
   display: flex;
   width: 85%;
   max-width: $content-max-width;
+  padding: 20px 35px;
   margin: 60px auto;
   min-height: 500px;
 
 
   .date {
-    color: #a3a3a3;
+    color: $light-grey;
     margin: 20px 0 10px;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 400;
+    font-size: 14px;
   }
 
   .post-sidebar {
-    flex: 1;
+    flex: 1 1 auto;
 
     p {
       text-transform: uppercase;
@@ -34,39 +35,50 @@
     }
 
     a {
+      text-transform: uppercase;
+      color: $color-secondary;
       #{$hover} {
     		color: $color-p;
     	}
     }
+
+    @media only screen and (max-width: 999px) {
+      display: none;
+    }
   }
   .post-cms {
-    flex: 3;
-    border-top: 1px solid #7e7d84;
+    flex: 3 1 auto;
 
     .entry-content {
       margin: 20px 0;
     }
 
     a {
-      border-bottom: 1px solid #CACACA;
-      font-weight: 600;
+      color: $color-secondary;
       #{$hover} {
     		color: $color-p;
     	}
     }
   }
 
+  .post-border {
+    padding: 35px;
+    border: 1px solid #dedede;
+  }
+
+
   // Style post navigations
   .post-nav {
-    padding: 10px 0px;
-    border-top: 1px solid #7e7d84;
-    border-bottom: 1px solid #7e7d84;
+    border-bottom: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
 
     a {
-    	font-size: 12px;
     	font-weight: 300;
     	text-transform: uppercase;
       cursor: pointer;
+      color: $color-secondary;
+
       #{$hover} {
     		color: $color-p;
     	}
@@ -74,6 +86,8 @@
 
     .nav-links {
       display: flex;
+      text-align: center;
+
       a:before, a:after {
         display: inline-block;
         position: absolute;
@@ -90,27 +104,44 @@
     }
 
     .nav-previous {
-      flex: 1;
+      flex: 1 0 auto;
+      padding: 40px 0px;
+
       a {
         padding-left: 1em;
         &:before {
             content: "\0034";
-            margin-left: -15px;
-            margin-top: .4em;
+            margin-left: -20px;
+            margin-top: .1em;
         }
       }
     }
     .nav-next {
-      flex: 1;
-      text-align: right;
+      flex: 1 0 auto;
+      padding: 40px 0px;
+      border-left: 1px solid #dedede;
+
       a {
         margin-right: 1em;
         &:after {
           content: "\0035";
           margin-left: .1em;
-          margin-top: .4em;
+          margin-top: .1em;
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 999px) {
+    margin: 0px auto;
+
+    .post-border {
+      padding: 15px;
+      border: none;;
+    }
+
+    .post-nav {
+      border-top: 1px solid #dedede;
     }
   }
 
@@ -129,7 +160,7 @@
   }
 
   // Mobile
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
@@ -154,12 +185,13 @@
   margin: 60px auto;
 
   .date {
-    color: #a3a3a3;
+    color: $light-grey;
     margin: 10px 0;
+    font-size: 14px;
   }
 
   .page-sidebar {
-    flex: 1;
+    flex: 1 1 auto;
 
     h3 {
       color: #1d5632;
@@ -167,7 +199,7 @@
     }
   }
   .page-cms {
-    flex: 3;
+    flex: 3 1 auto;
   }
 
   // Removing row padding from builder when in a news article

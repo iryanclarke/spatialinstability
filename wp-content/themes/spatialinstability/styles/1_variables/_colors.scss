@@ -10,7 +10,9 @@
 // Palette colors
 $white: #FFFFFF;
 $black: #000000;
-$orange: #f76c23;
+$navy-blue: #1f2833;
+$darker-blue: darken( $navy-blue, 10% );
+$orange: #d7a34f;
 $orange-hover: darken( $orange, 20% );
 $grey: #686868;
 $light-grey: #898989;
@@ -18,15 +20,15 @@ $light-grey: #898989;
 /*
   Site Colors
 */
-$color-main: $white;
-$color-secondary: $black;
+$color-main: $navy-blue;
+$color-secondary: $white;
 $color-third: $orange;
 
 // 1. Document colors
 $body-color: $color-main;
 
 // 2. Header
-$header-color: $color-secondary;
+$header-color: $darker-blue;
 $header-link-color: $color-main;
 $header-link-hover: $grey;
 
@@ -39,7 +41,7 @@ $color-link: $orange;
 $color-link-hover: $orange-hover;
 
 $color-text: $color-secondary;
-$color-p: $grey;
+$color-p: $color-secondary;
 $color-head: $color-text;
 
 // 5. Footer

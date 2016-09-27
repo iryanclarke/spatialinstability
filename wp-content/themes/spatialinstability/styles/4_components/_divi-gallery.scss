@@ -1,0 +1,87 @@
+// Styling the divi builder gallery module to be fullwidth
+#et_builder_outer_content .et_pb_section.divi-gallery {
+  .et_pb_row {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+
+    .et_pb_gallery_item {
+      margin: 0;
+      width: 20%;
+      height: 200px;
+      overflow: hidden;
+
+      img {
+        width: 110% !important;
+        min-width: 320px;
+        max-width: 500px !important;
+      }
+    }
+
+    .et_pb_grid_item:nth-child(4n+1) {
+      clear: none;
+    }
+
+    .et_overlay {
+      height: 200px;
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    .et_pb_row {
+
+      .et_pb_gallery_items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .et_pb_column .et_pb_grid_item {
+        margin-bottom: 0 !important;
+      }
+
+      .et_pb_gallery_item {
+        margin: 0 !important;
+        float: none;
+        width: 50% !important;
+        height: 250px;
+        img {
+          width: 110% !important;
+          min-width: 320px;
+          max-width: 1000px !important;
+        }
+      }
+
+      .et_overlay {
+        height: 250px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .et_pb_row {
+
+      .et_pb_gallery_items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .et_pb_column .et_pb_grid_item {
+        margin-bottom: 0 !important;
+      }
+
+      .et_pb_gallery_item {
+        margin: 0 !important;
+        float: none;
+        width: 100% !important;
+        height: 250px;
+        img {
+          width: 110% !important;
+          min-width: 320px;
+          max-width: 1000px !important;
+        }
+      }
+
+      .et_overlay {
+        height: 250px;
+      }
+    }
+  }
+}

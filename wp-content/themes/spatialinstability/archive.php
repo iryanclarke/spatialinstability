@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package spatialinstability
+ * @package icor
  */
 
 get_header(); ?>
@@ -13,59 +13,30 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 
 		<!-- Hero Banner -->
-		<div class="parallax hero-banner filter-black">
-			<div class="hero-image">
-				<img src="
-				<?php
-				 if(has_post_thumbnail()) {
-						$thumb_id = get_post_thumbnail_id();
-						$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-						$thumb_url = $thumb_url_array[0];
-						echo $thumb_url;
-				 }
-				 else {
-					 echo "/wp-content/uploads/2016/07/stock-photo-55174312-asian-engineer-in-factory.jpg";
-				 }
-				?>" style="top: 0px;">
-				<div class="small-info">
-					<h1><?php esc_html_e( 'Archive', 'spatialinstability' ); ?></h1>
-				</div>
+		<div class="parallax hero-banner" style="background-image: url(<?php echo get_stylesheet_directory_uri(); echo "/images/placeholders/icor-building.jpg";?>);">
+			<div class="hero-image scanLines">
 			</div>
-		</div><!-- #Hero Banner -->
-
-		<div class="post-content">
-			<div class="post-sidebar">
-				<hr/>
-				<h2> Categories </h2>
-
-				<?php
-					$catArgs = array(
-								'taxonomy'=>'category'
-								// post_type isn't a valid argument, no matter how you use it.
-								);
-					$categories = get_categories('taxonomy=category&post_type=news'); ?>
-					 <?php foreach ($categories as $category) : ?>
-							<div class="job-cat">
-								<h3>
-									<?php
-										if( $category->name != 'Uncategorized'){
-											echo $category->name;
-										} ?>
-								</h3>
-							</div>
-					 <?php endforeach; ?>
+		</div>
+		<div class="hero-sub-banner">
+			<div class="sub-text">
+				<h1><?php _e('Archive', 'icor'); ?></h1>
 			</div>
-			<!-- News CMS content -->
-			<div class="post-cms">
-				<hr/>
-				<div class="news-flex">
+		</div>
+
+		<div class="page-content">
+			<div class="page-cms">
+				<div id="events-archive" class="events-flex">
+
 					<?php
-					while ( have_posts() ) : the_post();
+						$custom_query = new WP_Query('&post_type=post');
+						while($custom_query->have_posts()) : $custom_query->the_post();
 
-						get_template_part( 'template-parts/content', 'news' );
+							get_template_part( 'template-parts/content', 'events' );
 
-					endwhile; // End of the loop.
 					?>
+
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); // reset the query ?>
 				</div>
 			</div>
 		</div>	<!-- #post-content -->

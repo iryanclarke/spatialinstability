@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package spatialinstability
+ * @package icor
  */
 
 ?><!DOCTYPE html>
@@ -23,18 +23,21 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'spatialinstability' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'icor' ); ?></a>
 
 	<header>
 		<div class="bottom-menu menu-container">
-			<a href="<?php echo site_url(); ?>" class="logo-link"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/spatialinstability-logo.svg" alt="spatialinstability logo" id="nav-logo" class="logo"></a>
+			<a href="<?php echo site_url(); ?>" class="logo-link"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/icor-logo.svg" alt="icor logo" id="nav-logo" class="logo"></a>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<input type="checkbox" id="toggle-right">
 				<label for="toggle-right" class="menu-toggle" style="z-index: 999;"></label>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'nav-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
+
 		</div>
 	</header>
+
+
 
 
 	<div id="content" class="site-content">

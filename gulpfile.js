@@ -7,9 +7,10 @@ var sourcemaps = require('gulp-sourcemaps');
 var rename = require("gulp-rename");
 
 
+
 function output(processors, extname) {
 
-    return gulp.src('wp-content/themes/basetheme/styles/main.scss')
+    return gulp.src('wp-content/themes/spatialinstability/styles/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(processors))
@@ -18,7 +19,7 @@ function output(processors, extname) {
             basename: "style",
             extname: extname
         }))
-        .pipe(gulp.dest('wp-content/themes/basetheme/'));
+        .pipe(gulp.dest('wp-content/themes/spatialinstability/'));
 
 }
 
@@ -52,6 +53,6 @@ gulp.task('dev', function () {
 
 gulp.task('watch', function () {
 
-	gulp.watch('wp-content/themes/basetheme/styles/**/*.scss', ['dev', 'production']);
+	gulp.watch('wp-content/themes/spatialinstability/styles/**/*.scss', ['dev', 'production']);
 
 });

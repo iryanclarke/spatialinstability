@@ -31,7 +31,7 @@
 		  left: auto;
 		  z-index: 70;
 			#{$hover} {
-		    color: $color-secondary;
+		    color: $color-main;
 			}
 			&:before {
 				font-family: 'ETmodules' !important;
@@ -51,7 +51,7 @@
 			}
 		}
 
-		div.menu-nav-menu-container {
+		div.menu-header-menu-container {
 			position: fixed;
 		  top: 0px;
 		  right: -270px;
@@ -67,16 +67,38 @@
 		  z-index: 2000;
 		}
 
+		#lang_sel {
+			position: fixed;
+		  bottom: 0px;
+		  right: -270px;
+		  left: auto;
+		  -webkit-transition: all 0.3s ease-out 0s;
+		  -moz-transition: all 0.3s ease-out 0s;
+		  transition: all 0.3s ease-out 0s;
+		  height: auto;
+		  width: 200px;
+			height: 50px;
+			padding: 50px 5px;
+		  background: #32373c;
+		  z-index: 2000;
+		}
+
 		#toggle-right {
 		  display: none;
-			&:checked ~ div.menu-nav-menu-container {
+			color: $color-main !important;
+			&:checked ~ div.menu-header-menu-container {
 		    right: 0px !important;
+				text-align: center;
+			}
+			&:checked ~ #lang_sel {
+		    right: -22px !important;
 				text-align: center;
 			}
 			&:checked + .menu-toggle {
 		    right: 79px;
-				color: $color-secondary;
+				color: $color-main;
 			}
 		}
 	}
+
 }

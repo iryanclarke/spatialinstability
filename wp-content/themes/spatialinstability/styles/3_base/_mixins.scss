@@ -40,7 +40,7 @@
 // Button styling
 @mixin button($bg-color: $color-main, $bg-hover: $color-third, $text-color:#000, $text-hover:#333, $radius: 10px) {
   background-color: #{$bg-color};
-  color: #{$text-color};
+  color: #{$text-color} !important;
   border-radius: #{$radius};
   padding: 0.6em 1em;
   line-height: 1;
@@ -92,7 +92,7 @@
   @include font-size(32px);
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 
   @media only screen and (max-width: 980px) {
     font-size: 36px;
@@ -124,11 +124,14 @@
 @mixin h5() {
   @include font-size(16px);
   text-transform: uppercase;
+  color: #565656;
+  font-weight: 500;
 }
 
 @mixin paragraph() {
   @include font-size(16px);
-  font-weight: 300;
+  font-weight: 400;
+  letter-spacing: 0.005em;
   color: $color-p;
 }
 

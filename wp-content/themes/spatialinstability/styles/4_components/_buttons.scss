@@ -1,6 +1,7 @@
 .btn,
 body button,
-body.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_button {
+body.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_button,
+body #et_builder_outer_content .nf-form-wrap .submit-wrap input {
 	@include button($orange, $orange-hover, $color-main, $color-main, 5px);
 	@include transition(0.3s);
 
@@ -8,11 +9,12 @@ body.et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_button {
 
 	cursor: pointer;
 	margin: 0.5em 0;
-	padding: 0.8em 1.2em;
+	padding: 0.9em 1.2em;
 	border: none;
-	font-weight: 300;
+	font-weight: 400;
 	text-transform: uppercase;
 	background: linear-gradient(#ff7d02, #f76c22);
+	box-shadow: 1px 3px 10px #dedede;
 
 	#{$hover} {
 		background: linear-gradient(darken(#ff7d02, 5%), darken(#f76c22, 5%));

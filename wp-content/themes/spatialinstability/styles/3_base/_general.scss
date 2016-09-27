@@ -30,6 +30,7 @@ body .site {
 
 body .site-content{
   flex: 1;
+  overflow-x: hidden;
 }
 
 // Default styling for non-pagebuilder pages/items

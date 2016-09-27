@@ -1,7 +1,9 @@
 .wrapper,
 .et_divi_builder #et_builder_outer_content .et_pb_section .et_pb_row {
-	width: 90%;
+	width: 100%;
 	@include center($wrapper-width);
+	max-width: $content-max-width;
+	padding: 0 35px;
 }
 
 
@@ -308,14 +310,6 @@ body.et_divi_builder #et_builder_outer_content {
 			padding-top: 30px;
 		}
 
-	}
-
-	.et_pb_column_4_4 {
-		p,
-		ul,
-		ol {
-			@include center($narrow-text);
-		}
 	}
 
 }
